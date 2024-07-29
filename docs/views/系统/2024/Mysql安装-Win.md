@@ -6,7 +6,6 @@ tags:
  - 数据库
 categories:
  - 系统
-# sticky: 1
 ---
 
 ## Mysql配置说明
