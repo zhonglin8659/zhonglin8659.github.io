@@ -2146,7 +2146,7 @@ location /demo{
 
 访问 `http://192.168.200.133:8081/rewrite/testabc`,能正确访问
 
-![1589475653252](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589475653252.png)
+![1589475653252](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589475653252.png)
 
 - break：将此处重写的URI作为一个新的URI,在本块中继续进行处理。该标志将重写后的地址在当前的location块中执行，不会将新的URI转向其他的location块。
 
@@ -2168,7 +2168,7 @@ location /demo{
 
 访问 `http://192.168.200.133:8081/rewrite/demoabc`,页面报404错误
 
-![1589475732042](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589475732042.png)
+![1589475732042](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589475732042.png)
 
 - redirect：将重写后的URI返回给客户端，状态码为302，指明是临时重定向URI,主要用在replacement变量不是以"http://"或者"https://"开头的情况。
 
@@ -2285,7 +2285,7 @@ server {
 
 镜像网站指定是将一个完全相同的网站分别放置到几台服务器上，并分别使用独立的URL进行访问。其中一台服务器上的网站叫主站，其他的为镜像网站。镜像网站和主站没有太大的区别，可以把镜像网站理解为主站的一个备份节点。可以通过镜像网站提供网站在不同地区的响应速度。镜像网站可以平衡网站的流量负载、可以解决网络宽带限制、封锁等。
 
-![1589560433192](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589560433192.png)
+![1589560433192](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589560433192.png)
 
 而我们所说的域名镜像和网站镜像比较类似，上述案例中，将www.itheima.com和 www.itheima.cn都能跳转到www.itcast.cn，那么www.itcast.cn我们就可以把它起名叫主域名，其他两个就是我们所说的镜像域名，当然如果我们不想把整个网站做镜像，只想为其中某一个子目录下的资源做镜像，我们可以在location块中配置rewrite功能，比如:
 
@@ -2444,7 +2444,7 @@ Nginx即可以实现正向代理，也可以实现反向代理。
 
 先提需求：
 
-![](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581846370052.png)
+![](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581846370052.png)
 
 (1)服务端的设置：
 
@@ -2465,7 +2465,7 @@ http {
 
 (2)使用客户端访问服务端，打开日志查看结果
 
-![1589729000713](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589729000713.png)
+![1589729000713](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589729000713.png)
 
 (3)代理服务器设置：
 
@@ -2485,11 +2485,11 @@ server {
 
 (5)在客户端配置代理服务器
 
-![](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581847577947.png)
+![](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581847577947.png)
 
 (6)设置完成后，再次通过浏览器访问服务端
 
-![1589729479920](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589729479920.png)
+![1589729479920](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589729479920.png)
 
 通过对比，上下两次的日志记录，会发现虽然我们是客户端访问服务端，但是如何使用了代理，那么服务端能看到的只是代理发送过去的请求，这样的化，就使用Nginx实现了正向代理的设置。
 
@@ -2654,7 +2654,7 @@ proxy_redirect off;
 
 ### Nginx反向代理实战
 
-![1581883378672](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581883378672.png)
+![1581883378672](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581883378672.png)
 
 服务器1,2,3存在两种情况
 
@@ -2721,7 +2721,7 @@ server {
 
 通过代理分开了客户端到应用程序服务器端的连接，实现了安全措施。在反向代理之前设置防火墙，仅留一个入口供代理服务器访问。
 
-![1589908851340](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589908851340.png)
+![1589908851340](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1589908851340.png)
 
 #### 如何使用SSL对流量进行加密
 
@@ -2882,7 +2882,7 @@ server {
 
 Buffer翻译过来是"缓冲"，Cache翻译过来是"缓存"。
 
-![1581879638569](E:/Users/Downloads/Nginx/https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581879638569.png)
+![1581879638569](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets02/1581879638569.png)
 
 总结下：
 

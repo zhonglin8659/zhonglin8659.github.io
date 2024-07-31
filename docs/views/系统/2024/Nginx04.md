@@ -609,8 +609,6 @@ vrrp_instance VI_1 {
 
 我们先来看一个网站`http://nginx.org/download/`这个我们刚开始学习Nginx的时候给大家看过这样的网站，该网站主要就是用来提供用户来下载相关资源的网站，就叫做下载网站。
 
-![1583825943945](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets04/1583825943945.png)
-
 如何制作一个下载站点:
 
 nginx使用的是模块ngx_http_autoindex_module来实现的，该模块处理以斜杠("/")结尾的请求，并生成目录列表。
@@ -663,16 +661,7 @@ location /download{
     autoindex_format html;
     autoindex_localtime on;
 }
-
 ```
-
-XML/JSON格式[一般不用这两种方式]
-
-![1583828317365](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets04/1583828317365.png)
-
-![1583828335279](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets04/1583828335279.png)
-
-
 
 ## Nginx的用户认证模块
 
@@ -728,8 +717,6 @@ htpasswd -b /usr/local/nginx/conf/htpasswd username password //在指定文件�
 htpasswd -D /usr/local/nginx/conf/htpasswd username //从指定文件删除一个用户信息
 htpasswd -v /usr/local/nginx/conf/htpasswd username //验证用户名和密码是否正确
 ```
-
-![1583850151467](https://sugarys.oss-cn-beijing.aliyuncs.com/document/nginx/assets04/1583850151467.png)
 
 上述方式虽然能实现用户名和密码的验证，但是大家也看到了，所有的用户名和密码信息都记录在文件里面，如果用户量过大的话，这种方式就显得有点麻烦了，这时候我们就得通过后台业务代码来进行用户权限的校验了。
 
