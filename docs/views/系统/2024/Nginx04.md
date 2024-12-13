@@ -6,7 +6,7 @@ tags:
  - 集群
 categories:
  - 系统
-sticky: 1
+sticky: 2
 ---
 
 ## Nginx集群搭建
