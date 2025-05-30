@@ -31,7 +31,7 @@ module.exports = {
       .tap(options => Object.assign(options, { limit: 5242880 }))
   },
   debug: false,
-  port: 9999,
+  port: 9998,
   base: '/',
   dest: "sugarysblog",
   theme: "reco",
